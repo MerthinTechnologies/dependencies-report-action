@@ -1,0 +1,35 @@
+name: "Dependencies Builder"
+description: "Report showing all dependencies in Node.js Project"
+author: "Merthin"
+
+inputs:
+  path:
+    description: "File to begin report from"
+    required: false
+    default: "."
+  ignore:
+    description: "Folders to exclude from report"
+    required: false
+    default:
+      - "**/node_modules/**"
+      - "**/dist/**"
+      - "**/storybook-static/**"
+  name-mappings:
+    description: "Map files to certain names"
+    required: false
+    default:
+      - "@ced/cli-dev:@ced/cli"
+      - "functions:public-api"
+  exclude:
+    description: "File to exclude from report"
+    required: false
+    default:
+      - "@ced/cli-sample"
+  output:
+    description: "Name of HTML file for action to generate"
+    required: false
+    default: "dependencies-report.html"
+
+runs:
+  using: "node12"
+  main: dist/index.js

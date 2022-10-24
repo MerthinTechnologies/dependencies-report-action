@@ -1,0 +1,25 @@
+{
+  "name": "dependencies-report-action",
+  "version": "1.0.0",
+  "description": "Custom Action to create dependencies report in npm project",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup src/action.js --format cjs --file dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MerthinTechnologies/dependencies-report-action.git"
+  },
+  "author": "Merthin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MerthinTechnologies/dependencies-report-action/issues"
+  },
+  "homepage": "https://github.com/MerthinTechnologies/dependencies-report-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@ced/deps": "^1.1.28",
+    "rollup": "^3.2.3"
+  }
+}
